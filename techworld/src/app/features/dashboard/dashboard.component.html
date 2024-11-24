@@ -1,0 +1,15 @@
+<div class="dashboard-parent-container">
+  <div class="dashboard-container">
+    <div class="card" *ngFor="let card of dashboardCards">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.count }}</p>
+      <a [routerLink]="card.link">View Details</a>
+    </div>
+    <!-- Admin Role Card -->
+    <div *ngIf="isAdmin" class="card">
+      <h3>Users</h3>
+      <p>{{ usersCount }}</p>
+      <a routerLink="/dashboard/users">View Users</a>
+    </div>
+  </div>
+</div>

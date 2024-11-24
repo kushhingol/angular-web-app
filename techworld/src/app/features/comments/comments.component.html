@@ -1,0 +1,17 @@
+<div class="comments-container">
+  <h2>Comments</h2>
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search comments by name, email, or body..."
+      [formControl]="searchControl"
+    />
+  </div>
+  <div class="comments-grid">
+    <div *ngFor="let comment of filteredComments" class="comment-card">
+      <h3>{{ comment.name }}</h3>
+      <p><strong>Email:</strong> {{ comment.email }}</p>
+      <p>{{ comment.body }}</p>
+    </div>
+  </div>
+</div>
