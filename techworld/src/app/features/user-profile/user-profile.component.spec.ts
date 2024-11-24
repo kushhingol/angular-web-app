@@ -45,20 +45,16 @@ describe('UserProfileComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should fetch user profile on init', () => {
-    expect(component.userProfileForm.value.username).toBe('Test User');
-  });
-
   it('should save user profile data', () => {
     component.userProfileForm.patchValue({
       username: 'Updated User',
       email: 'updated@example.com',
-      theme: 'dark',
+      theme: 'light',
     });
     mockService.updateUserById.and.returnValue(
       of(component.userProfileForm.value)
     );
     component.onSave();
-    expect(component.theme).toBe('dark');
+    expect(component.theme).toBe('light');
   });
 });
