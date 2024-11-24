@@ -1,0 +1,32 @@
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dashboard-parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 200px;
+  padding: 16px;
+  margin: 8px;
+  background-color: #f1f1f1;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 1.2em;
+}
+
+.card a {
+  color: blue;
+  text-decoration: none;
+  font-size: 1em;
+}

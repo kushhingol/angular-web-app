@@ -1,0 +1,20 @@
+<div class="posts-page">
+  <!-- Search Bar -->
+  <h2>Posts</h2>
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      placeholder="Search posts..."
+      (input)="onSearch()"
+    />
+  </div>
+
+  <!-- Posts Grid -->
+  <div class="posts-grid">
+    <div class="post-card" *ngFor="let post of filteredPosts">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.body }}</p>
+    </div>
+  </div>
+</div>

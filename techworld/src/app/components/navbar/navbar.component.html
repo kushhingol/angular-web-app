@@ -1,0 +1,25 @@
+<nav class="navbar">
+  <div class="links">
+    <a routerLink="/dashboard">Home</a>
+    <a routerLink="/dashboard/posts">Posts</a>
+    <a routerLink="/dashboard/comments">Comments</a>
+    <a routerLink="/dashboard/albums">Albums</a>
+    <a routerLink="/dashboard/photos">Photos</a>
+    <a routerLink="/dashboard/todos">Todos</a>
+    <a routerLink="/dashboard/users">Users</a>
+  </div>
+  <div class="avatar">
+    <div class="dropdown">
+      <img class="dropbtn" src="avatar.png" alt="Avatar" />
+
+      <div class="dropdown-content">
+        <div class="dropdown-btn-div" (click)="onLogout()">
+          <button class="dropdown-btn" (click)="onLogout()">Logout</button>
+        </div>
+        <div class="dropdown-btn-div" (click)="onSettings()">
+          <button class="dropdown-btn" (click)="onSettings()">Settings</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

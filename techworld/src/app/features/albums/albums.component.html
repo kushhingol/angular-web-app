@@ -1,0 +1,15 @@
+<div class="albums-container">
+  <h2>Albums</h2>
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search albums by title..."
+      [formControl]="searchControl"
+    />
+  </div>
+  <div class="albums-grid">
+    <div *ngFor="let album of filteredAlbums" class="album-card">
+      <h3>{{ album.title }}</h3>
+    </div>
+  </div>
+</div>

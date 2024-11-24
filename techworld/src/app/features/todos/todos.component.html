@@ -1,0 +1,20 @@
+<div class="todos-container">
+  <h2>Todos</h2>
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search todos..."
+      [formControl]="searchControl"
+    />
+  </div>
+  <div class="todos-grid">
+    <div
+      *ngFor="let todo of filteredTodos"
+      class="todo-card"
+      [class.completed]="todo.completed"
+    >
+      <h3>{{ todo.title }}</h3>
+      <p>Status: {{ todo.completed ? "Completed" : "Pending" }}</p>
+    </div>
+  </div>
+</div>
